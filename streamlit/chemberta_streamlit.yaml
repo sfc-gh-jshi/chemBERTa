@@ -1,0 +1,22 @@
+spec:
+  container:
+  - name: chembertastreamlit
+    image: sfsenorthamerica-demo-ben2.registry.snowflakecomputing.com/llama2/demo/images/streamlit/chemberta:latest
+    env:
+      ENABLE_CUDA: 1
+      NVIDIA_VISIBLE_DEVICES: all
+    resources:
+      requests:
+        nvidia.com/gpu: 1
+      limits:
+        nvidia.com/gpu: 1    
+    volumeMounts:
+      - name: model
+        mountPath: /model
+  volume:
+  - name: model
+    source: "@MODEL"
+  endpoints:
+    - name: streamlit
+      port: 8501
+      public: true

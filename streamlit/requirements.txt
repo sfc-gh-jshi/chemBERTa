@@ -1,0 +1,6 @@
+python-dotenv
+streamlit
+snowflake-snowpark-python[pandas]
+simpletransformers
+transformers
+torch
