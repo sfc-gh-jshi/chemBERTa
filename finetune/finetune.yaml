@@ -1,0 +1,27 @@
+spec:
+  container:
+  - name: nvidia-notebook
+    image: sfsenorthamerica-demo-ben2.registry.snowflakecomputing.com/snowpark_container_service/llm_dev/images/chemberta
+    volumeMounts:
+      - name: snowpark-data
+        mountPath: /notebooks/snowpark-data
+    env:
+      SNOWFLAKE_MOUNTED_STAGE_PATH: /notebooks/snowpark-data
+      ENABLE_CUDA: 1
+      NVIDIA_VISIBLE_DEVICES: all
+    resources:
+      requests:
+        nvidia.com/gpu: 3
+      limits:
+        nvidia.com/gpu: 3     
+  volume:
+  - name: snowpark-data
+    source: "@SPECS"
+  - name: model
+    source: "@MODEL"
+  endpoint:
+  - name: jupyter-notebook
+    port: 8888
+    public: true
+  networkPolicyConfig:
+      allowInternetEgress: true

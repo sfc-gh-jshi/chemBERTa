@@ -1,0 +1,14 @@
+python-dotenv
+streamlit
+peft 
+sentence_transformers 
+einops 
+bitsandbytes 
+accelerate  
+transformers[torch] 
+xformers 
+datasets 
+trl 
+einops 
+torch 
+snowflake-snowpark-python[pandas]
