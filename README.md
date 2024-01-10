@@ -12,7 +12,7 @@ Fine tune a [chemBERTa](https://arxiv.org/abs/2010.09885) model for drug discove
 
 * The fine tuned model is saved in a Snowflake internal stage.
 * A Streamlit is running in Snowpark Container Services (SPCS) to load the model, allowing users to make predictions.
-* For inference, input data is a SMILES string. Predictions include the predicted label (0 indicates the molecule is not toxic, 1 indicates toxic), and upper bound, lower bound of the predictions.
+* For inference, input data is a SMILES string. Predictions include the predicted label (0 indicates the molecule is not toxic, 1 indicates toxic), and upper bound, lower bound of the prediction.
 
 ## Architecture
 ![Architecture!](/img/Architecture.png "Architecture")
