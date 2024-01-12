@@ -5,6 +5,8 @@ spec:
     volumeMounts:
       - name: snowpark-data
         mountPath: /notebooks/snowpark-data
+      - name: model
+        mountPath: /notebooks/model
     env:
       SNOWFLAKE_MOUNTED_STAGE_PATH: /notebooks/snowpark-data
       ENABLE_CUDA: 1
