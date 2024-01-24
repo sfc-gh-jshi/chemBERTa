@@ -4,4 +4,4 @@ ADD ./requirements.txt /app/
 RUN pip install --no-cache-dir -r requirements.txt
 ADD ./ /app
 EXPOSE 8501
-CMD ["streamlit", "run", "LLM_Chat.py"]
+CMD ["streamlit", "run", "chemberta_streamlit.py"]
