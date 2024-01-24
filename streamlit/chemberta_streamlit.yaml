@@ -1,7 +1,7 @@
 spec:
   container:
   - name: chembertastreamlit
-    image: sfsenorthamerica-demo-ben2.registry.snowflakecomputing.com/llama2/demo/images/streamlit/chemberta:latest
+    image: sfsenorthamerica-demo-ben2.registry.snowflakecomputing.com/snowpark_container_service/llm_dev/images/chembertastreamlit:v1
     env:
       ENABLE_CUDA: 1
       NVIDIA_VISIBLE_DEVICES: all
@@ -20,3 +20,5 @@ spec:
     - name: streamlit
       port: 8501
       public: true
+  networkPolicyConfig:
+      allowInternetEgress: true
