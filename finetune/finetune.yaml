@@ -11,6 +11,7 @@ spec:
       SNOWFLAKE_MOUNTED_STAGE_PATH: /notebooks/snowpark-data
       ENABLE_CUDA: 1
       NVIDIA_VISIBLE_DEVICES: all
+      NUM_GPU: 3
     resources:
       requests:
         nvidia.com/gpu: 3
